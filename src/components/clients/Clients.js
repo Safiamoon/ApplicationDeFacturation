@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import ClientServices from '../../services/ClientService';
+import axios from 'axios';
 import { Link } from 'react-router-dom';
 
 const Clients = () => {
@@ -17,21 +18,20 @@ const Clients = () => {
     const loadClients  = async () => {
         const result = await ClientServices.getClients();
         console.log(result);
-        setClients(result.data.reverse());
+        setClients(result.data);
     }
 
     
-    const deleteClient  = async () => {
-        const result = await ClientServices.deleteCurrentClient();
-        console.log(result);
-        setClients(result.data);
+    const deleteClient = async id => {
+        await axios.delete(`http://localhost:3003/clients/${id}`);
+        loadClients();
     }
 
     return(
         <div className="container">
             <div className="py-4">
                 <h1 className="mb-5 text-center font-weight-bold">LISTE DES CLIENTS</h1>
-                <button className="mb-5 btn float-right text-white" style={{backgroundColor: "#041f47"}}>Ajouter un nouveau client</button>
+                <Link className="mb-5 btn float-right text-white" style={{backgroundColor: "#041f47"}} to="/clients/add" >Ajouter un nouveau client</Link>
                 <table className="table border shadow">
                     <thead className="thead-light">
                         <tr>
@@ -48,8 +48,8 @@ const Clients = () => {
                             clients.map((client, index) => (
                                 <tr> 
                                     <th scope="row">{index + 1}</th>
-                                    <td>{client.first_name}</td>
-                                    <td>{client.last_name}</td>
+                                    <td>{client.firstname}</td>
+                                    <td>{client.lastname}</td>
                                     <td>{client.email}</td>
                                     <td>{client.entreprise}</td>
                                     <td>

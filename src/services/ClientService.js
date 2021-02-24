@@ -7,6 +7,9 @@ class ClientServices {
     deleteCurrentClient(id) {
         return axios.delete(`http://localhost:3003/clients/${id}`);
     }
+    getCurrentClient(id) {
+        return axios.get(`http://localhost:3003/clients/${id}`);
+    }
 
 }
 

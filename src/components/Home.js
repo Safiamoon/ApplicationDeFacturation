@@ -1,5 +1,4 @@
 import React from "react";
-import Navbar from "../shared/Navbar";
 import firstImage from '../pics/3.jpg';
 
 

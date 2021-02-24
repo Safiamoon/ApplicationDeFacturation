@@ -13,8 +13,8 @@ export default class Navbar extends Component{
                 </button>
                 <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div className="ml-auto navbar-nav">
-                        <Link className="nav-item nav-link text-white" to='/factures'>Factures</Link>
-                        <Link className="nav-item nav-link text-white" to='/clients'>Clients</Link>
+                        <Link className="nav-item nav-link text-white font-weight-bold" to='/factures'>Factures</Link>
+                        <Link className="nav-item nav-link text-white font-weight-bold" to='/clients'>Clients</Link>
                     </div>
                 </div>
             </nav>

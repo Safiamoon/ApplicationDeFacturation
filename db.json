@@ -54,6 +54,13 @@
       "email": "jeff@simpson.com",
       "entreprise": "Simpsons",
       "id": 7
+    },
+    {
+      "firstname": "Safia",
+      "lastname": "Moon",
+      "email": "safia@gmail.com",
+      "entreprise": "Safia's Co",
+      "id": 8
     }
   ],
   "factures": [

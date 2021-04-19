@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from 'react';
-import ClientServices from '../../services/ClientService';
 import { Link, useParams} from 'react-router-dom';
 import axios from 'axios';
 

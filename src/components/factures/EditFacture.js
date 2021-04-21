@@ -2,73 +2,62 @@ import axios from 'axios';
 import React, {useEffect, useState} from 'react'
 import {Link, useHistory, useParams} from "react-router-dom";
 
-const AddClient = () => {
+const EditFacture = () => {
 
     let history = useHistory();
     const {id} = useParams();
-    const [client, setClient] = useState({
-        firstname: "",
-        lastname: "",
-        email: "",
-        entreprise : ""
+    const [facture, setFacture] = useState({
+        client: "",
+        date_envoi: "",
+        statut: "",
+        montant : ""
     });
 
-    const {firstname, lastname, email, entreprise} = client;
+    const {client, date_envoi, statut, montant} = facture;
 
     const onInputChange = e => {
         console.log(e.target.value);
-        setClient({...client,[e.target.name] : e.target.value})
+        setFacture({...facture,[e.target.name] : e.target.value})
     };
 
     const onSubmit = async (e) => {
         e.preventDefault();
-        await axios.put(`http://localhost:3003/clients/${id}`, client);
-        history.push("/clients");
+        await axios.put(`http://localhost:3003/factures/${id}`, client);
+        history.push("/factures");
     };
 
     useEffect (() => {
-        loadClient();
+        loadFacture();
     }, []);
 
-    const loadClient = async () => {
-        const result = await axios.get(`http://localhost:3003/clients/${id}`);
+    const loadFacture = async () => {
+        const result = await axios.get(`http://localhost:3003/factures/${id}`);
         console.log(result);
-        setClient(result.data);
+        setFacture(result.data);
     }
     
     return (
         <div className="container">
             <div className="w-75 mx-auto shadow p-5">
-            <h2 className="mb-5 text-center font-weight-bold">Modifier un client</h2>
+            <h2 className="mb-5 text-center font-weight-bold">Modifier une facture</h2>
             <form onSubmit={e => onSubmit(e)}>
                 <div className="form-group">
                 <input
                     type="text"
                     className="form-control form-control-lg"
-                    placeholder="Prénom..."
-                    name="firstname"
-                    value={firstname}
+                    placeholder="Client..."
+                    name="client"
+                    value={client}
                     onChange={e => onInputChange(e)}
                 />
                 </div>
                 <div className="form-group">
                 <input
-                    type="text"
+                    type="date"
                     className="form-control form-control-lg"
-                    placeholder="Nom..."
-                    name="lastname"
-                    value={lastname}
-                    onChange={e => onInputChange(e)}
-
-                />
-                </div>
-                <div className="form-group">
-                <input
-                    type="email"
-                    className="form-control form-control-lg"
-                    placeholder="E-mail..."
-                    name="email"
-                    value={email}
+                    placeholder="Date de l'envoi..."
+                    name="date_envoi"
+                    value={date_envoi}
                     onChange={e => onInputChange(e)}
 
                 />
@@ -77,9 +66,20 @@ const AddClient = () => {
                 <input
                     type="text"
                     className="form-control form-control-lg"
-                    placeholder="Entreprise..."
-                    name="entreprise"
-                    value={entreprise}
+                    placeholder="Statut"
+                    name="statut"
+                    value={statut}
+                    onChange={e => onInputChange(e)}
+
+                />
+                </div>
+                <div className="form-group">
+                <input
+                    type="text"
+                    className="form-control form-control-lg"
+                    placeholder="Montant..."
+                    name="montant"
+                    value={montant}
                     onChange={e => onInputChange(e)}
 
                 />
@@ -94,4 +94,4 @@ const AddClient = () => {
     )
 }
 
-export default AddClient;
+export default EditFacture;

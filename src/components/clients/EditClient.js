@@ -1,10 +1,11 @@
 import axios from 'axios';
-import React, {useState} from 'react'
-import {Link, useHistory} from "react-router-dom";
+import React, {useEffect, useState} from 'react'
+import {Link, useHistory, useParams} from "react-router-dom";
 
 const AddClient = () => {
 
     let history = useHistory();
+    const {id} = useParams();
     const [client, setClient] = useState({
         firstname: "",
         lastname: "",
@@ -21,10 +22,20 @@ const AddClient = () => {
 
     const onSubmit = async (e) => {
         e.preventDefault();
-        await axios.put("http://localhost:3003/clients", client);
+        await axios.put(`http://localhost:3003/clients/${id}`, client);
         history.push("/clients");
     };
 
+    useEffect (() => {
+        loadClient();
+    }, []);
+
+    const loadClient = async () => {
+        const result = await axios.get(`http://localhost:3003/clients/${id}`);
+        console.log(result);
+        setClient(result.data);
+    }
+    
     return (
         <div className="container">
             <div className="w-75 mx-auto shadow p-5">

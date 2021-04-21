@@ -54,17 +54,11 @@
       "email": "jeff@simpson.com",
       "entreprise": "Simpsons",
       "id": 7
-    },
-    {
-      "firstname": "Safia",
-      "lastname": "Moon",
-      "email": "safia@gmail.com",
-      "entreprise": "Safia's Co",
-      "id": 8
     }
   ],
   "factures": [
     {
+      "id": 1,
       "numéro": 1,
       "client": "John Doe",
       "date_envoi": "25/12/2020",
@@ -72,6 +66,7 @@
       "montant": "980 €"
     },
     {
+      "id": 2,
       "numéro": 2,
       "client": "Marc Pitt",
       "date_envoi": "10/02/2021",
@@ -79,6 +74,7 @@
       "montant": "560 €"
     },
     {
+      "id": 3,
       "numéro": 3,
       "client": "Emily Stanfield",
       "date_envoi": "05/02/2021",
@@ -86,6 +82,7 @@
       "montant": "1 200 €"
     },
     {
+      "id": 4,
       "numéro": 4,
       "client": "Jane Wilfrid",
       "date_envoi": "01/01/2021",
@@ -93,6 +90,7 @@
       "montant": "350 €"
     },
     {
+      "id": 5,
       "numéro": 5,
       "client": "Bob Dupont",
       "date_envoi": "25/02/2021",
@@ -100,6 +98,7 @@
       "montant": "765 €"
     },
     {
+      "id": 6,
       "numéro": 6,
       "client": "Henry Doe",
       "date_envoi": "11/12/2020",

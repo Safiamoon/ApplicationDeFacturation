@@ -19,7 +19,7 @@ const Factures = () => {
 
     
     const deleteFacture = async id => {
-        await axios.delete(`http://localhost:3003/facture/${id}`);
+        await axios.delete(`http://localhost:3003/factures/${id}`);
         loadFactures();
     }
 

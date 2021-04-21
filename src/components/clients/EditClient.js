@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, {useEffect, useState} from 'react'
 import {Link, useHistory, useParams} from "react-router-dom";
 
-const AddClient = () => {
+const EditClient = () => {
 
     let history = useHistory();
     const {id} = useParams();
@@ -94,4 +94,4 @@ const AddClient = () => {
     )
 }
 
-export default AddClient;
+export default EditClient;

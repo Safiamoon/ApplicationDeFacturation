@@ -1,4 +1,4 @@
-# Application de facturation
+# Application de facturation - REACT CRUD Application
 
 This app was made for learning purpose.
 

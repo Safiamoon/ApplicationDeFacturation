@@ -1,70 +1,32 @@
-# Getting Started with Create React App
+# Application de facturation
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This app was made for learning purpose.
 
-## Available Scripts
+👉[Click here to discover more >> https://hailin-sim.netlify.app/](https://hailin-sim.netlify.app/) 👈 
+## How to run
 
-In the project directory, you can run:
+1. Clone this project from git.
+2. Run `yarn install`.
+3. Run `json-server --watch db.json --port 3003`
+4. Run `yarn start`.
 
-### `yarn start`
+Application will start at http://localhost:3000.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Technnologies & libraries: 
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- React.js
+- Bootstrap
 
-### `yarn test`
+## API JSON:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- I made a personnalised json-server (db.json), filled it with some fake data and I used the links provided to call the wanted or specific data.
 
-### `yarn build`
+## Hosting : 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Netlify
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Preview
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![img1](/screenshots/img1.PNG)
+![img2](/screenshots/img2.PNG)
+![img3](/screenshots/img3.PNG)
